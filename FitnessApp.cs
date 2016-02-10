@@ -21,13 +21,30 @@ namespace Treehouse.FitnessFrog
             }
             else
             {            
-            int minutes = int.Parse(entry);                   
-               
-            // Add minutes exercised to total
-            runningTotal = runningTotal + minutes;
-                            
-            // Display total minutes exercised to the screen                  
-            System.Console.WriteLine("You've entered " + entry + " minutes");
+              int minutes = int.Parse(entry); 
+              
+              if(minutes <= 10)
+              {
+                  Console.WriteLine("Better than nothing, hombre!");
+              }
+              else if(minutes <= 30)
+              {
+                  Console.WriteLine("Way to go Champ!");
+              }
+              else if(minutes <= 60)
+              {
+                  Console.WriteLine("You must be Unstoppable!");
+              }
+              else
+              {
+                  Console.WriteLine("Okay, now you're just showing off!");
+              }
+                 
+              // Add minutes exercised to total
+              runningTotal = runningTotal + minutes;
+                              
+              // Display total minutes exercised to the screen                  
+              System.Console.WriteLine("You've entered " + runningTotal + " minutes");
             }
              // Repeat until the user quits
           }
